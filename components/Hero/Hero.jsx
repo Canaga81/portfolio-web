@@ -6,7 +6,9 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
+
     <section>
+      
       <div className="grid grid-cols-1 md:grid-cols-12">
         {/* col-span 8 */}
         <motion.div
@@ -42,7 +44,9 @@ const Hero = () => {
         {/* col-span 4 */}
       </div>
     </section>
+
   );
+
 };
 
 export default Hero;
