@@ -24,8 +24,9 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li>Bartın University</li>
-        <li>Girne American University</li>
+        <li>UNEC</li>
+        <li>JED Academy</li>
+        <li>DIV Academy</li>
       </ul>
     ),
   },
@@ -34,9 +35,8 @@ const TAB_DATA = [
     id: "certifications",
     content: (
       <ul className="list-disc pl-2">
-        <li>AWS Cloud Practitioner</li>
-        <li>Google Professional Cloud Developer</li>
-        <li>Cisco</li>
+        <li>Jed Academy Course Sertificated</li>
+        <li>Jed Academy Experience Sertificated</li>
       </ul>
     ),
   },
@@ -72,9 +72,29 @@ const About = () => {
             <Tabbutton 
                 selectTab={() => handleChange("skills")}
                 active={tab === "skills"}
-            />
+            >Skills
+            </Tabbutton>
+
+            <Tabbutton 
+                selectTab={() => handleChange("education")}
+                active={tab === "education"}
+            >Education
+            </Tabbutton>
+
+            <Tabbutton 
+                selectTab={() => handleChange("certifications")}
+                active={tab === "certifications"}
+            >Certifications
+            </Tabbutton>
 
           </div>
+
+          <div className="mt-8">
+            {
+              TAB_DATA.find((t) => t.id === tab)?.content
+            }
+          </div>
+
         </div>
 
       </div>

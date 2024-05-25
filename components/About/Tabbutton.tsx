@@ -14,7 +14,7 @@ interface TabButtonProps {
 
 const Tabbutton = ({active, selectTab, children}:TabButtonProps) => {
 
-    const buttonClasses = active ? "text-white" : "text-slate-100"
+    const buttonClasses = active ? "text-white" : "text-slate-100";
 
     return (
     <button onClick={selectTab}>
@@ -34,7 +34,9 @@ const Tabbutton = ({active, selectTab, children}:TabButtonProps) => {
         </motion.div>
         
     </button>
-  )
+    
+  );
+
 }
 
 export default Tabbutton;
